@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Indicator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--! FONTS -->
+
+</head>
+
+<body>
+    <div class="allcontent">
+        <div class="header">
+            <div class="container">
+                <a class="branding" href="index.html">
+                    <img src="./images/cloud.png" alt="" class="logo">
+                    <div class="logo-type">
+                        <h1 class="site-title">Weather</h1>
+                        <small class="site-description">Smart Weather Forecast</small>
+                    </div>
+                </a>
+
+                <div class="main-navigation">
+                    <ul class="menu">
+                        <li class="menu-item current-menu-item"><a href="/">Home</a></li>
+                        <li class="menu-item"><a href="#">News</a></li>
+                        <li class="menu-item"><a href="#">Live cameras</a></li>
+                        <li class="menu-item"><a href="#">Photos</a></li>
+                        <li class="menu-item"><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- !WEATHER TABLE -->
+
+        <div class="hero">
+            <div class="container-fluid">
+                <form class="find-location">
+                    <input type="text" id="input" placeholder="Find your location..." id="search">
+                    <input type="button" onclick="weatherChecker()" id="button" value="Find" id="submit">
+                </form>
+
+            </div>
+        </div>
+        <div class="forecast-table">
+            <div class="container">
+                <div class="forecast-container" id="forecast">
+                    <div class="today forecast" id="rn">
+                        <div class="forecast-header" id="today">
+                            <div class="weekDay">Sunday</div>
+                            <div class="date"><span class="day"></span><div class="month"></div></div>
+                        </div> 
+                        <div class="forecast-content" id="current">
+                            <div class="location"></div>
+                            <div class="degree">
+                                <div class="num"><span class="temp">20</span><sup>o</sup>C</div>
+
+                                <div class="forecast-icon1">
+                                </div>
+
+                            </div>
+                            <div class="custom">Sunny</div>
+                            <span><i class="fa-solid fa-umbrella"></i>20%</span>
+                            <span><i class="fa-solid fa-wind"></i>18km/h</span>
+                            <span><i class="fa-regular fa-compass"></i>East</span>
+                        </div>
+                    </div>
+                    <div class="forecast" id="two">
+                        <div class="forecast-header">
+                            <div class="tmrw">Monday</div>
+                        </div> 
+                        <div class="forecast-content">
+                            <div class="forecast-icon2">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" width="48">
+                            </div>
+                            <div class="degree"><span class="temp2m"></span><sup>o</sup>C</div>
+                            <small class="temp2min">12.9<sup>o</sup></small>
+                            <div class="custom2">Sunny</div>
+                        </div>
+                    </div>
+                    <div class="forecast" id="three">
+                        <div class="forecast-header">
+                            <div class="afterTmrw">Tuesday</div>
+                        </div> 
+                        <div class="forecast-content">
+                            <div class="forecast-icon3">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" width="48">
+                            </div>
+                            <div class="degree"><span class="temp3m"></span><sup>o</sup>C</div>
+                            <small class="temp3min"><sup>o</sup></small>
+                            <div class="custom3">Sunny</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--! FOOTER -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Enter your email to subscribe...">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="footer-box col-md-3 ">
+                        <div class="social-links">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer> 
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
